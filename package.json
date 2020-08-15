@@ -6,7 +6,8 @@
     "dev": "aspida && nuxt-ts",
     "build": "aspida && nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "aspida && nuxt-ts generate"
+    "generate": "aspida && nuxt-ts generate",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@aspida/axios": "^0.10.2",

@@ -8,7 +8,8 @@ declare module 'vue/types/vue' {
   }
 }
 
-const plugin: Plugin = ({ $axios }, inject) =>
-  inject('api', api(axiosClient($axios)))
+const plugin: Plugin = (context) => {
+  (<any>context).$api = api(axiosClient(context.$axios)) // Error
+}
 
 export default plugin
